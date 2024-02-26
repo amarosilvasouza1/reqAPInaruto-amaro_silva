@@ -1,6 +1,7 @@
-import { requestPessons } from "./request.js"
+import { requestPessons, requestVillages } from "./request.js"
 
-export const createOption = async () => {
+// create-clans
+const createOptionClans = async () => {
 
     const clans = await requestPessons()
 
@@ -17,4 +18,27 @@ export const createOption = async () => {
     }
    return clans
 }
-createOption()
+createOptionClans()
+// create-clans
+
+// create-villagens
+const createOptionVillagens = async () => {
+
+    const villagens = await requestVillages()
+
+    const select = document.querySelector(".villages")
+
+    for (let i = 0; i < villagens.length; i++) {
+        const villagen = villagens[i];
+        
+        const option = document.createElement("option")
+        option.innerHTML = villagen.name
+        option.value = villagen.id
+
+       select.appendChild(option)
+    }
+   return villagens
+}
+
+createOptionVillagens()
+// create-villagens
