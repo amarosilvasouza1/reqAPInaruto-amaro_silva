@@ -1,0 +1,12 @@
+
+select {
+    background-color: rgb(219, 214, 214);
+    color: black;
+
+    border: none;
+    border-radius: 7px;
+    width: 10rem;
+    height: 2rem;
+    
+    inset-inline: none;
+}
